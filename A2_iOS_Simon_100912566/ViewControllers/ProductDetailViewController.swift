@@ -24,4 +24,34 @@ class ProductDetailViewController: UIViewController {
     var context: NSManagedObjectContext {
         return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
+    
+    // MARK: Lifecycle Methods
+    //
+    
+    // MARK: Data Loading
+    func fetchProducts() {
+        let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
+        
+        do {
+            products = try context.fetch(fetchRequest)
+            if !products.isEmpty {
+                displayProduct(at: 0)
+            }
+        } catch {
+            print("Failed to fetch products: \(error)")
+        }
+    }
+    
+    func displayProduct(at index: Int) {
+        guard index >= 0 && index < products.count else { return }
+        
+        currentIndex = index
+        let product = products[index]
+        
+        productIDLabel.text = "ID: \(product.productID ?? "")"
+        nameLabel.text = product.productName
+        descriptionTextView.text = product.productDescription
+        priceLabel.text = String(format: "$%.2f", product.productPrice)
+        providerLabel.text = "Provider: \(product.productProvider ?? "")"
+    }
 }
