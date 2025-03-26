@@ -16,7 +16,7 @@ class ProductsTableViewController: UITableViewController {
         return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
     
-    // MARK: - Lifecycle Methods
+    // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
