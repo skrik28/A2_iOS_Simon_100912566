@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F4C528A42D9484BA00322C1B /* ProductModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4C528A22D9484BA00322C1B /* ProductModel.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F4C528852D94846200322C1B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		F4C5286E2D94845E00322C1B /* A2_iOS_Simon_100912566.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = A2_iOS_Simon_100912566.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C528842D94846200322C1B /* A2_iOS_Simon_100912566Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = A2_iOS_Simon_100912566Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C5288E2D94846200322C1B /* A2_iOS_Simon_100912566UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = A2_iOS_Simon_100912566UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C528A32D9484BA00322C1B /* ProductModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProductModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -88,6 +93,7 @@
 		F4C528652D94845E00322C1B = {
 			isa = PBXGroup;
 			children = (
+				F4C528A22D9484BA00322C1B /* ProductModel.xcdatamodeld */,
 				F4C528702D94845E00322C1B /* A2_iOS_Simon_100912566 */,
 				F4C528872D94846200322C1B /* A2_iOS_Simon_100912566Tests */,
 				F4C528912D94846200322C1B /* A2_iOS_Simon_100912566UITests */,
@@ -249,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C528A42D9484BA00322C1B /* ProductModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +570,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F4C528A22D9484BA00322C1B /* ProductModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F4C528A32D9484BA00322C1B /* ProductModel.xcdatamodel */,
+			);
+			currentVersion = F4C528A32D9484BA00322C1B /* ProductModel.xcdatamodel */;
+			path = ProductModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F4C528662D94845E00322C1B /* Project object */;
 }
