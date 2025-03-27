@@ -32,7 +32,23 @@ class ProductDetailViewController: UIViewController {
         // setup nav bar
         navigationItem.title = "Product Details"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "All Products", style: .plain, target: self, action: #selector(showAllProducts))
+        
+        //add a button on left bar for adding new products
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewProduct))
+        
+        // search bar
+        //
+        
+        // load Products
+        fetchProducts()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchProducts()
+    }
+    
+    
     
     // MARK: Data Loading
     func fetchProducts() {
