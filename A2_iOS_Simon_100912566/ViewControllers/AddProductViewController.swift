@@ -20,7 +20,15 @@ class AddProductViewController: UIViewController {
         return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
         
-    
+    // MARK: Lifecycle methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.title = "Add New Product"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveProduct))
+        
+        
+    }
     
     
     // MARK: Actions
