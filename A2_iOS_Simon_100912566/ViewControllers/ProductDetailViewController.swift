@@ -26,7 +26,13 @@ class ProductDetailViewController: UIViewController {
     }
     
     // MARK: Lifecycle Methods
-    //
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // setup nav bar
+        navigationItem.title = "Product Details"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "All Products", style: .plain, target: self, action: #selector(showAllProducts))
+    }
     
     // MARK: Data Loading
     func fetchProducts() {
@@ -53,5 +59,26 @@ class ProductDetailViewController: UIViewController {
         descriptionTextView.text = product.productDescription
         priceLabel.text = String(format: "$%.2f", product.productPrice)
         providerLabel.text = "Provider: \(product.productProvider ?? "")"
+    }
+    
+    // MARK: Actions
+    @IBAction func previousButtonTapped(_ sender: UIButton){
+        if currentIndex > 0{
+            displayProduct(at: currentIndex - 1)
+        }
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: UIButton){
+        if currentIndex < products.count - 1{
+            displayProduct(at: currentIndex + 1)
+        }
+    }
+    
+    @objc func showAllProducts() {
+        performSegue(withIdentifier: "ShowAllProducts", sender: nil)
+    }
+    
+    @objc func addNewProduct() {
+        performSegue(withIdentifier: "AddProduct", sender: nil)
     }
 }
