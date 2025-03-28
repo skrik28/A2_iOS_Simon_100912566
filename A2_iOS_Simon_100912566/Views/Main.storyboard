@@ -105,6 +105,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="xcO-Tg-5vt"/>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="5yg-mc-P5Z" id="AoR-fK-Pka"/>
+                        <outlet property="nameTextField" destination="NIy-D0-E0f" id="5cV-2p-Cf6"/>
+                        <outlet property="priceTextField" destination="deI-lA-Yqb" id="4a4-hJ-1YK"/>
+                        <outlet property="productIDTextField" destination="9we-hj-SK4" id="QWw-kJ-dJV"/>
+                        <outlet property="providerTextField" destination="CTC-u0-eQO" id="cht-F3-Aie"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hnu-Rw-9cw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -158,12 +165,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="previousButtonTapped:" destination="OIh-mk-dgP" eventType="touchUpInside" id="wmz-B6-0i6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLu-Wa-a4V">
                                 <rect key="frame" x="318" y="292" width="75" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="OIh-mk-dgP" eventType="touchUpInside" id="RzQ-j1-kvM"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NnB-ac-2WB">
                                 <rect key="frame" x="76" y="623" width="240" height="128"/>
@@ -179,6 +192,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="descriptionTextView" destination="NnB-ac-2WB" id="Z9g-3W-uAD"/>
+                        <outlet property="nameLabel" destination="jD4-wq-t5o" id="HRY-Ho-iyZ"/>
+                        <outlet property="priceLabel" destination="nMk-U3-nuV" id="gUi-6g-L3n"/>
+                        <outlet property="productIDLabel" destination="Hdu-qz-7BV" id="kKv-wt-aRM"/>
+                        <outlet property="providerLabel" destination="lvK-ml-TTl" id="COP-Zd-xk3"/>
                         <segue destination="zfT-xe-7Ag" kind="show" identifier="ShowAllProducts" id="oAt-7w-JNN"/>
                         <segue destination="05N-9x-Atx" kind="show" identifier="AddProduct" id="3Pf-kn-eVc"/>
                     </connections>
